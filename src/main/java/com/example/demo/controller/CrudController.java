@@ -18,6 +18,15 @@ public class CrudController<T, ID> {
 	@Autowired
 	private ICrudService<T, ID> service;
 	
+	@GetMapping
+	public List<T> getAll(){
+		return service.getAll();
+	}
+	
+	@PostMapping
+	public void add(@RequestBody T entity) {
+		service.add(entity);
+	}
 	
 	@PutMapping
 	public void update(@RequestBody T entity) {
