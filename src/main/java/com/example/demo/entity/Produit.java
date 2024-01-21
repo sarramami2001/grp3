@@ -12,10 +12,13 @@ public class Produit {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotBlank
 	private String ref;
 	
+	@NotNull
 	private int quantite;
 	
+	@NotNull
 	private float prixUnitaire;
 
 	public Produit() {
