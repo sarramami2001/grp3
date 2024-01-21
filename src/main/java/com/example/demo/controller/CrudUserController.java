@@ -16,20 +16,29 @@ import com.example.demo.util.RoleEnum;
 @RestController
 @RequestMapping("/api/crud_user")
 public class CrudUserController extends CrudController<User, Long> {
-		
-	@Autowired
-	private RoleRepository roleRepository;
-	
-	public List<User> getAll(){
-		List<User> users = super.getAll();
-		users.forEach(user -> user.setPassword(null));
-		return users;
-	}
-	
-	public void add(@RequestBody User user) {
-		Role role = roleRepository.findByName(RoleEnum.ROLE_USER.getName());
-		user.setRoles(Arrays.asList(role));
-		user.setEnable(true);
-		super.add(user);
-	}
+
+    private final RoleRepository roleRepository;
+
+    // Constructor Injection
+    @Autowired
+    public CrudUserController(RoleRepository roleRepository) {
+        super();
+        this.roleRepository = roleRepository;
+    }
+
+    // Get all users with passwords omitted
+    public List<User> getAll() {
+        List<User> users = super.getAll();
+        users.forEach(user -> user.setPassword(null));
+        return users;
+    }
+
+    // Add a new user with a default role and enabled status
+    public void add(@RequestBody User user) {
+        Role role = roleRepository.findByName(RoleEnum.ROLE_USER.getName());
+        user.setRoles(Arrays.asList(role));
+        user.setEnable(true);
+        super.add(user);
+    }
 }
+
