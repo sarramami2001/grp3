@@ -87,5 +87,14 @@ public class Produit {
 		return true;
 	}
 	
+	@Override
+	public String toString() {
+		return "Produit{" +
+		    "id=" + id +
+            ", ref='" + ref + '\'' +
+            ", quantite=" + quantite +
+            ", prixUnitaire=" + prixUnitaire +
+            '}';
+	}
 	
 }
