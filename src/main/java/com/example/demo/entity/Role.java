@@ -17,6 +17,7 @@ public class Role {
 	private Long id;
 	
 	private String name;
+	private String cin;
 
 	public Role() {
 		super();
@@ -65,6 +66,9 @@ public class Role {
 		return name;
 	}
 
+	public String getCIN() {
+		return cin;
+	}
 	public void setName(String name) {
 		this.name = name;
 	}
