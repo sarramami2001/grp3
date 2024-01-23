@@ -18,6 +18,7 @@ public class Role {
 	
 	@NotBlank
 	private String name;
+	private String lastname;
 
 	public Role() {
 		super();

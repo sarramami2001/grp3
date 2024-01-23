@@ -20,6 +20,8 @@ public class Produit {
 	
 	@NotNull
 	private float prixUnitaire;
+	private float prixGros;
+	
 
 	public Produit() {
 		super();
