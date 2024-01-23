@@ -103,5 +103,22 @@ public class Produit {
         // Implement your equals logic here
         return super.equals(obj);
     }
+	 // New method faress
+    public void myCustomMethod() {
+        System.out.println("This is a custom method added to the Produit class.");
+    }
+
+    @Override
+    public int hashCode() {
+        // Implement your hashCode logic here
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        // Implement your equals logic here
+        return super.equals(obj);
+    }
 	
+}
 }
