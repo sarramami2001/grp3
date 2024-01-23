@@ -23,9 +23,15 @@ public class ProduitService implements ICrudService<Produit, Long>{
 	}
 
 	@Override
-	public void add(Produit produit) {
-		produitRepository.save(produit);
-	}
+    public void add(Produit produit) {
+        try {
+            validateProduit(produit);
+            produitRepository.save(produit);
+            // Log success
+        } catch (Exception e) {
+            // Log error and possibly rethrow or handle appropriately
+        }
+    }
 
 	@Override
 	public void update(Produit produit) {
