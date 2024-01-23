@@ -23,6 +23,7 @@ public class User {
 	@Column(unique=true)
 	private String username;
 	
+	@NotBlank
 	private String password;
 	
 	private boolean enable;

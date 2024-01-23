@@ -16,6 +16,7 @@ public class Role {
 	@Column(name="ROLE_ID")
 	private Long id;
 	
+	@NotBlank
 	private String name;
 
 	public Role() {
