@@ -12,10 +12,13 @@ public class Produit {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotBlank
 	private String ref;
 	
+	@NotNull
 	private int quantite;
 	
+	@NotNull
 	private float prixUnitaire;
 
 	public Produit() {
@@ -92,8 +95,20 @@ public class Produit {
 	 }
 	
 	
+<<<<<<< HEAD
 	 public float calculerMontantTotal11() {
 		return quantite * prixUnitaire;
 	 }
+=======
+	@Override
+	public String toString() {
+		return "Produit{" +
+		    "id=" + id +
+            ", ref='" + ref + '\'' +
+            ", quantite=" + quantite +
+            ", prixUnitaire=" + prixUnitaire +
+            '}';
+	}
+>>>>>>> SaraOthmani
 	
 }
