@@ -18,6 +18,11 @@ public class Role {
 	
 	@NotBlank
 	private String name;
+<<<<<<< HEAD
+	private String cin;
+=======
+	private String lastname;
+>>>>>>> ba13f49a7ec7f7d1ac37d52d991320ef0a324399
 
 	public Role() {
 		super();
@@ -66,6 +71,9 @@ public class Role {
 		return name;
 	}
 
+	public String getCIN() {
+		return cin;
+	}
 	public void setName(String name) {
 		this.name = name;
 	}

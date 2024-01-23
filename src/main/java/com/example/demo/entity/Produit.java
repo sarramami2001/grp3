@@ -20,6 +20,8 @@ public class Produit {
 	
 	@NotNull
 	private float prixUnitaire;
+	private float prixGros;
+	
 
 	public Produit() {
 		super();
@@ -89,7 +91,17 @@ public class Produit {
 			return false;
 		return true;
 	}
+
+	public float calculerMontantTotal() {
+		return quantite * prixUnitaire;
+	 }
 	
+	
+<<<<<<< HEAD
+	 public float calculerMontantTotal11() {
+		return quantite * prixUnitaire;
+	 }
+=======
 	@Override
 	public String toString() {
 		return "Produit{" +
@@ -99,5 +111,6 @@ public class Produit {
             ", prixUnitaire=" + prixUnitaire +
             '}';
 	}
+>>>>>>> SaraOthmani
 	
 }
