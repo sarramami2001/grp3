@@ -23,9 +23,11 @@ public class User {
 	@Column(unique=true)
 	private String username;
 	
+	@NotBlank
 	private String password;
 	
 	private boolean enable;
+	private int age ;
 	
 	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name="USERS_ROLES",

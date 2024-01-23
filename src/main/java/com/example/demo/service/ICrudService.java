@@ -14,3 +14,4 @@ public interface ICrudService<T, ID> {
 	
 	void saveAll(Iterable<T> iterable);
 }
+//fares test

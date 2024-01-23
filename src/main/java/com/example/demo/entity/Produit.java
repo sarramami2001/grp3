@@ -12,11 +12,16 @@ public class Produit {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotBlank
 	private String ref;
 	
+	@NotNull
 	private int quantite;
 	
+	@NotNull
 	private float prixUnitaire;
+	private float prixGros;
+	
 
 	public Produit() {
 		super();
@@ -86,6 +91,26 @@ public class Produit {
 			return false;
 		return true;
 	}
+
+	public float calculerMontantTotal() {
+		return quantite * prixUnitaire;
+	 }
 	
+	
+<<<<<<< HEAD
+	 public float calculerMontantTotal11() {
+		return quantite * prixUnitaire;
+	 }
+=======
+	@Override
+	public String toString() {
+		return "Produit{" +
+		    "id=" + id +
+            ", ref='" + ref + '\'' +
+            ", quantite=" + quantite +
+            ", prixUnitaire=" + prixUnitaire +
+            '}';
+	}
+>>>>>>> SaraOthmani
 	
 }
