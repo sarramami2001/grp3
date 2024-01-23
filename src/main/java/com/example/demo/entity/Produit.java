@@ -86,6 +86,14 @@ public class Produit {
 			return false;
 		return true;
 	}
+
+	public float calculerMontantTotal() {
+		return quantite * prixUnitaire;
+	 }
 	
+	
+	 public float calculerMontantTotal11() {
+		return quantite * prixUnitaire;
+	 }
 	
 }
