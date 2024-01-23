@@ -18,6 +18,7 @@ public class Produit {
 	
 	private float prixUnitaire;
 	private float prixGros;
+	
 
 	public Produit() {
 		super();
