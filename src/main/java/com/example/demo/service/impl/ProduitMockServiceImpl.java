@@ -20,6 +20,7 @@ public class ProduitMockServiceImpl implements ICrudService<Produit, Long>{
 		produits.add(new Produit("Livre", 50, 20));
 		produits.add(new Produit("Cahier", 200, 5.25f));
 		produits.add(new Produit("Stylo", 500, 2.10f));
+		produits.add(new Produit("carnet", 320, 4.60f));
 	}
 	
 	
