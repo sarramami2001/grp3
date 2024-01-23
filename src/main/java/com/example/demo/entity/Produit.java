@@ -90,7 +90,7 @@ public class Produit {
 	  
   // New method faress
     public void myCustomMethod() {
-        System.out.println("This is a custom method added to the Produit class.");
+        System.out.println("This   is a custom method added to the Produit class.");
     }
 
     @Override
