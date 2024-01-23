@@ -86,6 +86,7 @@ public class Produit {
 			return false;
 		return true;
 	}
+<<<<<<< HEAD
 	  
   // New method faress
     public void myCustomMethod() {
@@ -104,6 +105,9 @@ public class Produit {
         return super.equals(obj);
     }
 	 // New method faress
+=======
+    // New method added
+>>>>>>> main
     public void myCustomMethod() {
         System.out.println("This is a custom method added to the Produit class.");
     }
@@ -120,5 +124,8 @@ public class Produit {
         return super.equals(obj);
     }
 	
+<<<<<<< HEAD
 }
+=======
+>>>>>>> main
 }
